@@ -4,6 +4,7 @@ argv = sys.argv
 
 
 def countLower(str) -> int:
+    """Compte les lettres minuscules."""
     lowerCase = 0
     for char in str:
         if char.islower():
@@ -12,6 +13,7 @@ def countLower(str) -> int:
 
 
 def countUpper(str) -> int:
+    """Compte les lettres majuscules."""
     upperCase = 0
     for char in str:
         if char.isupper():
@@ -20,6 +22,7 @@ def countUpper(str) -> int:
 
 
 def punctuationCount(str) -> int:
+    """Compte les ponctuations."""
     punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
     punctuationMarks = 0
     for c in str:
@@ -29,6 +32,7 @@ def punctuationCount(str) -> int:
 
 
 def digitCount(str) -> int:
+    """Compte les chiffres."""
     digits = 0
     for c in str:
         if c.isdigit() is True:
@@ -37,6 +41,7 @@ def digitCount(str) -> int:
 
 
 def main():
+    """Analyse le texte fourni et gère les erreurs éventuelles."""
     countSpace = 0
     errorStr = "AssertionError: more than one argument is provided"
     try:
