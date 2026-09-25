@@ -44,8 +44,8 @@ def building():
             str = argv[1]
         countSpace = str.count(" ")
         print(f"The text contains {len(str)} characters:")
-        print(f"{countUpper(str)} lower letters")
-        print(f"{countLower(str)} upper letters")
+        print(f"{countUpper(str)} upper letters")
+        print(f"{countLower(str)} lower letters")
         print(f"{punctuationCount(str)} punctuation marks")
         print(f"{countSpace} spaces")
         print(f"{digitCount(str)} digits")
