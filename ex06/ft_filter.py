@@ -3,21 +3,19 @@ import sys
 argv = sys.argv
 
 
-def main():
+def ft_filter():
+    """Renvoie une liste avec des mots plus grand que le nombre inscrit"""
     errorStr = "AssertionError: the arguments are bad"
-    myList = []
     try:
         if (len(argv) < 3 or len(argv) > 3):
             raise AssertionError
         else:
             try:
                 n = int(argv[2])
-                print("good")
+                str = argv[1].split()
+                print([x for x in str if len(x) > n])
+
             except ValueError:
-                print("AssertionError: the arguments are bad")
+                print(errorStr)
     except AssertionError:
         print(errorStr)
-
-
-if __name__ == "__main__":
-    main()
