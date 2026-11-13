@@ -11,9 +11,10 @@ def ft_filter():
             raise AssertionError
         else:
             try:
+                lb = lambda x : len(x) > n
                 n = int(argv[2])
                 str = argv[1].split()
-                print([x for x in str if len(x) > n])
+                print([x for x in str if lb(x)])
 
             except ValueError:
                 print(errorStr)
