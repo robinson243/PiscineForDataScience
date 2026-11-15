@@ -1,6 +1,9 @@
 def ft_filter(func, iterable):
-    """filter(function or None, iterable) --> filter object\n\nReturn an iterator yielding those items of iterable for which function(item)\nis true. If function is None, return the items that are true."""
-    if func == None:
+    ("""filter(function or None, iterable) --> filter object\n\n"""
+        """Return an iterator yielding those items"""
+        """ of iterable for which function(item)\n"""
+        """is true. If function is None, return the items that are true.""")
+    if func is None:
         return [x for x in iterable if bool(x)]
     else:
         return [x for x in iterable if func(x)]
