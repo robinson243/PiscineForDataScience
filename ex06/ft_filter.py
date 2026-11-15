@@ -1,25 +1,23 @@
-import sys
+def ft_filter(func, iterable):
+    """filter(function or None, iterable) --> filter object\n\nReturn an iterator yielding those items of iterable for which function(item)\nis true. If function is None, return the items that are true."""
+    if func == None:
+        return [x for x in iterable if bool(x)]
+    else:
+        return [x for x in iterable if func(x)]
 
-argv = sys.argv
 
+# ages = [5, 12, 17, 18, 0, 32]
 
-def lb(n):
-    lambda x: len(x) > n
+# def myFunc(x):
+#   if x < 18:
+#     return False
+#   else:
+#     return True
 
+# def main():
+#     adults = ft_filter(myFunc, ages)
+#     for x in adults:
+#         print(x)
 
-def ft_filter():
-    """Renvoie une liste avec des mots plus grand que le nombre inscrit"""
-    errorStr = "AssertionError: the arguments are bad"
-    try:
-        if (len(argv) < 3 or len(argv) > 3):
-            raise AssertionError
-        else:
-            try:
-                n = int(argv[2])
-                str = argv[1].split()
-                print([x for x in str if lb(n)])
-
-            except ValueError:
-                print(errorStr)
-    except AssertionError:
-        print(errorStr)
+# if __name__ == "__main__":
+#     main()
