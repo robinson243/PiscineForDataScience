@@ -1,14 +1,15 @@
 from time import sleep
 from tqdm import tqdm
 from Loading import ft_tqdm
-# for elem in ft_tqdm(range(500)):
-#     sleep(0.005)
-# print()
-for elem in tqdm(range(1500)):
+for elem in ft_tqdm(range(500)):
+    sleep(0.005)
+print()
+for elem in tqdm(range(500)):
     sleep(0.005)
 print()
 
-# mon_compteur = ft_tqdm(range(10))  # Rien ne s'exécute ici ! (Lazy evaluation)
+# mon_compteur = ft_tqdm(range(10))  # Rien ne s'exécute ici ! (Lazy
+# evaluation)
 
 # # L'exécution du corps de la fonction démarre seulement au premier appel de next()
 
