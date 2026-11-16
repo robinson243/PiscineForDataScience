@@ -13,6 +13,7 @@ def ft_tqdm(lst: range) -> None:
         percentSign = percentSign + 1
         countColumn = int(percentSign * (column - 43) / len(lst))
         finalSign = "=" * countColumn
-        print(f"{count}%|[{finalSign}>]", end="\r")
-        sign += "="
+        # print(f"{count}%|[{finalSign}> \033[50G ] ", end="\r")
+        print(f"{count}%|[{finalSign}>", end="")
+        print(f"\033[{column - 35}G]", end="\r")
         yield t
