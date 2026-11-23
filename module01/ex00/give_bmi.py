@@ -2,7 +2,8 @@ def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
     tab = []
     if len(height) != len(weight):
-        print(AssertionError("AssertionError: len of weight and height are not equal"))
+        err = "AssertionError: len of weight and height are not equal"
+        print(AssertionError(err))
         return tab
 
     for i in range(len(height)):
