@@ -27,8 +27,8 @@ def slice_me(family: list, start: int, end: int) -> list:
             end, bool), "You use boolean not int"
         array = np.array(family)
         newList = array[start: end]
-        print(f"My shape is :", np.shape(array))
-        print(f"My new shape is :", np.shape(newList))
+        print("My shape is :", np.shape(array))
+        print("My new shape is :", np.shape(newList))
 
     except AssertionError as err:
         print(f"AssertionError: {err}")
