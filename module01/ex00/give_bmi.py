@@ -1,24 +1,32 @@
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
     tab = []
-    if len(height) != len(weight):
-        err = "AssertionError: len of weight and height are not equal"
-        print(AssertionError(err))
-        return tab
+    try:
+        assert isinstance(weight, list) and isinstance(
+            height, list), "One of element is not a list"
+        assert len(height) == len(
+            weight), "len of weight and height are not equal"
 
-    for i in range(len(height)):
-        val = weight[i] / (height[i] * height[i])
-        tab.append(val)
+        for i in range(len(height)):
+            val = weight[i] / (height[i] * height[i])
+            tab.append(val)
+    except AssertionError as err:
+        print(err)
     return tab
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     tab = []
-    for i in range(len(bmi)):
-        if bmi[i] > limit:
-            tab.append(True)
-        else:
-            tab.append(False)
+    try:
+        assert isinstance(bmi, list
+                          ), "One of element is not a list"
+        for i in range(len(bmi)):
+            if bmi[i] > limit:
+                tab.append(True)
+            else:
+                tab.append(False)
+    except AssertionError as e:
+        print(e)
     return tab
 
 
