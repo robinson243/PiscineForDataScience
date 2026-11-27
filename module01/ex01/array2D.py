@@ -2,6 +2,18 @@ import numpy as np
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    """Découpe un tableau 2D entre les indices start et end.
+
+    Affiche la forme du tableau d'origine, puis celle du tableau découpé.
+
+    Args:
+        family: liste de listes de même longueur.
+        start: indice de la première ligne gardée (entier, peut être négatif).
+        end: indice de fin, exclu (entier, peut être négatif).
+
+    Returns:
+        La partie découpée sous forme de liste, ou None en cas d'erreur.
+    """
     try:
         assert isinstance(family, list), "ce n'est pas une liste"
         assert len(family) > 0, "la liste est vide"
